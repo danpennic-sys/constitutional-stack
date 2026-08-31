@@ -2,6 +2,14 @@
 
 Umbrella repository for the complete frozen constitutional contract.
 
+## License
+
+Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+
+**Dual-use / cryptographic notice:** This software includes cryptographic
+functionality. Users are responsible for compliance with applicable export
+control and dual-use regulations. See the NOTICE file for the full statement.
+
 ## Layers
 
 | # | Layer | Directory | Status |
