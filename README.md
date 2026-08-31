@@ -1,36 +1,66 @@
 # Constitutional Stack
 
-Umbrella repository for the complete frozen constitutional contract.
+![Status](https://img.shields.io/badge/status-constitutional-blueviolet)
+![Layers](https://img.shields.io/badge/layers-10-blue)
+![License](https://img.shields.io/badge/license-Apache%202.0-green)
+![Crypto](https://img.shields.io/badge/crypto-dual--use%20notice-orange)
 
-## License
+> Frozen constitutional contract for verifiable envelope chains.
+> Deterministic. Replay-safe. No inference. No drift.
 
-Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+---
 
-**Dual-use / cryptographic notice:** This software includes cryptographic
-functionality. Users are responsible for compliance with applicable export
-control and dual-use regulations. See the NOTICE file for the full statement.
-
-## Layers
+## The Ten Layers
 
 | # | Layer | Directory | Status |
 |---|-------|-----------|--------|
-| 1 | Envelope contract | `01-envelope-contract/` | Skeleton |
-| 2 | Lineage schema | `02-lineage-schema/` | Skeleton |
-| 3 | Evolution rules | `03-evolution-rules/` | Skeleton |
-| 4 | Verifier identity + key rotation | `04-verifier-identity/` | Skeleton |
-| 5 | Proof schema | `05-proof-schema/` | Skeleton |
-| 6 | Evidence attachment | `06-evidence-attachment/` | Skeleton |
-| 7 | Replay protocol | `07-replay-protocol/` | Skeleton |
-| 8 | Chain query semantics | `08-chain-query/` | Skeleton |
-| 9 | Verifier upgrade protocol | `09-verifier-upgrade/` | Skeleton |
-| 10 | Chain compaction semantics | `10-chain-compaction/` | **Implemented** |
+| 01 | Envelope Contract | [`01-envelope-contract/`](01-envelope-contract/) | Skeleton |
+| 02 | Lineage Schema | [`02-lineage-schema/`](02-lineage-schema/) | Skeleton |
+| 03 | Evolution Rules | [`03-evolution-rules/`](03-evolution-rules/) | Skeleton |
+| 04 | Verifier Identity + Key Rotation | [`04-verifier-identity/`](04-verifier-identity/) | Skeleton |
+| 05 | Proof Schema | [`05-proof-schema/`](05-proof-schema/) | Skeleton |
+| 06 | Evidence Attachment | [`06-evidence-attachment/`](06-evidence-attachment/) | Skeleton |
+| 07 | Replay Protocol | [`07-replay-protocol/`](07-replay-protocol/) | Skeleton |
+| 08 | Chain Query Semantics | [`08-chain-query/`](08-chain-query/) | Skeleton |
+| 09 | Verifier Upgrade Protocol | [`09-verifier-upgrade/`](09-verifier-upgrade/) | Skeleton |
+| **10** | **Chain Compaction Semantics** | [`10-chain-compaction/`](10-chain-compaction/) | **Implemented** |
 
-## Compaction (Layer 10)
+---
 
-Fully implemented Go snapshot core, Nitro API routes, CLI, migrations, and conformance test skeletons.
-See `10-chain-compaction/README.md`.
+## Layer 10 — Compaction (Live)
 
-## Next steps
+Full operator-grade implementation:
 
-- Flesh out the remaining layer directories with the corresponding frozen contracts and implementations.
-- Keep each layer independently versionable while remaining under this single constitutional umbrella.
+- Snapshot generator & verifier (Go)
+- Constitutional Postgres schema
+- Snapshot store interface + Postgres implementation
+- Archive mover (relocate, never delete)
+- Nitro API routes
+- CLI (`nitro-compact`)
+- Conformance vectors CP-01 → CP-08
+
+See [`10-chain-compaction/README.md`](10-chain-compaction/README.md).
+
+---
+
+## License & Dual-Use Notice
+
+Apache License 2.0 — see [LICENSE](LICENSE).
+
+This software contains **cryptographic functionality**.  
+Users are responsible for compliance with applicable export-control and dual-use regulations.  
+Full statement in [NOTICE](NOTICE).
+
+---
+
+## Constitutional Principles
+
+- Append-only
+- Deterministic canonical bytes
+- No inference of identity or lineage
+- Replay must produce identical results with or without compaction
+- Proofs remain bound to envelopes forever
+
+---
+
+*Operator Pages · Constitutional Stack*
