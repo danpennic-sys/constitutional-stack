@@ -1,2 +1,28 @@
-# constitutional-stack
-Umbrella repository for the full constitutional stack: Envelope contract, Lineage, Evolution rules, Verifier identity + key rotation, Proof schema, Evidence attachment, Replay protocol, Chain query semantics, Verifier upgrade protocol, and Chain compaction semantics.
+# Constitutional Stack
+
+Umbrella repository for the complete frozen constitutional contract.
+
+## Layers
+
+| # | Layer | Directory | Status |
+|---|-------|-----------|--------|
+| 1 | Envelope contract | `01-envelope-contract/` | Skeleton |
+| 2 | Lineage schema | `02-lineage-schema/` | Skeleton |
+| 3 | Evolution rules | `03-evolution-rules/` | Skeleton |
+| 4 | Verifier identity + key rotation | `04-verifier-identity/` | Skeleton |
+| 5 | Proof schema | `05-proof-schema/` | Skeleton |
+| 6 | Evidence attachment | `06-evidence-attachment/` | Skeleton |
+| 7 | Replay protocol | `07-replay-protocol/` | Skeleton |
+| 8 | Chain query semantics | `08-chain-query/` | Skeleton |
+| 9 | Verifier upgrade protocol | `09-verifier-upgrade/` | Skeleton |
+| 10 | Chain compaction semantics | `10-chain-compaction/` | **Implemented** |
+
+## Compaction (Layer 10)
+
+Fully implemented Go snapshot core, Nitro API routes, CLI, migrations, and conformance test skeletons.
+See `10-chain-compaction/README.md`.
+
+## Next steps
+
+- Flesh out the remaining layer directories with the corresponding frozen contracts and implementations.
+- Keep each layer independently versionable while remaining under this single constitutional umbrella.
